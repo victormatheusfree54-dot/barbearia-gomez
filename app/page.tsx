@@ -147,6 +147,7 @@ export default function Home() {
                   src="/barbearia-gomez.jpg" 
                   alt="Interior da Barbearia Gomez" 
                   fill
+                  unoptimized
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
