@@ -51,7 +51,6 @@ export default function Home() {
           </div>
           <div className="hidden md:flex gap-8 items-center font-headline tracking-tighter uppercase">
             <a className="text-neutral-400 font-medium hover:text-primary transition-all duration-300" href="#servicos" onClick={(e) => handleSmoothScroll(e, 'servicos')}>Serviços</a>
-            <a className="text-neutral-400 font-medium hover:text-primary transition-all duration-300" href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')}>Planos</a>
             <a className="text-neutral-400 font-medium hover:text-primary transition-all duration-300" href="#localizacao" onClick={(e) => handleSmoothScroll(e, 'localizacao')}>Localização</a>
             <a className="bg-primary-container text-on-primary-container px-6 py-2 text-sm font-bold active:scale-95 ease-in-out transition-all rounded-sm" href={whatsappLink} target="_blank" rel="noopener noreferrer">Agendar</a>
           </div>
@@ -141,17 +140,7 @@ export default function Home() {
             <motion.div variants={fadeInUp} className="md:col-span-2 bg-surface-container border border-outline-variant/15 p-12 group hover:bg-surface-container-high transition-colors rounded-sm">
               <div className="text-4xl mb-8">🧔🏻‍♂️</div>
               <h3 className="font-headline text-3xl mb-4">Barboterapia Premium</h3>
-              <p className="text-on-surface-variant mb-8 max-w-md">Toalhas quentes, óleos essenciais e massagem facial para uma experiência de relaxamento profundo e barbear perfeito.</p>
-              <div className="w-full h-80 md:h-96 overflow-hidden rounded-sm relative shadow-xl shadow-black/40">
-                <Image 
-                  src="/barbearia-gomez.jpg" 
-                  alt="Interior da Barbearia Gomez" 
-                  fill
-                  unoptimized
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+              <p className="text-on-surface-variant max-w-md">Toalhas quentes, óleos essenciais e massagem facial para uma experiência de relaxamento profundo e barbear perfeito.</p>
             </motion.div>
 
             {/* Service 2 */}
@@ -169,14 +158,7 @@ export default function Home() {
             </motion.div>
 
             {/* Service 3 */}
-            <motion.div variants={fadeInUp} className="bg-surface-container-low border border-outline-variant/15 p-12 group rounded-sm">
-              <div className="text-4xl mb-8">🧴</div>
-              <h3 className="font-headline text-2xl mb-4">Limpeza de Pele</h3>
-              <p className="text-on-surface-variant">Remoção de impurezas com produtos importados exclusivos para a pele masculina.</p>
-            </motion.div>
-
-            {/* Service 4 */}
-            <motion.div variants={fadeInUp} className="md:col-span-2 bg-surface-container border border-outline-variant/15 p-12 flex items-center gap-12 group rounded-sm">
+            <motion.div variants={fadeInUp} className="md:col-span-3 bg-surface-container border border-outline-variant/15 p-12 flex items-center gap-12 group rounded-sm">
               <div className="flex-1">
                 <div className="text-4xl mb-8">🎨</div>
                 <h3 className="font-headline text-3xl mb-4">Pigmentação & Camuflagem</h3>
@@ -193,72 +175,6 @@ export default function Home() {
               </div>
             </motion.div>
           </motion.div>
-        </section>
-
-        {/* Plans Section */}
-        <section className="bg-surface-container-lowest luxury-gap" id="planos">
-          <div className="max-w-7xl mx-auto px-6">
-            <motion.div 
-              className="text-center mb-24"
-              {...fadeInUp}
-            >
-              <h2 className="font-headline text-4xl md:text-6xl mb-6 italic">Club Gomez</h2>
-              <p className="text-on-surface-variant text-lg max-w-2xl mx-auto uppercase tracking-widest text-sm">Assinaturas mensais para o homem que valoriza sua imagem constantemente.</p>
-            </motion.div>
-
-            <motion.div 
-              className="grid md:grid-cols-3 gap-8"
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="whileInView"
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              {/* Plan 1 */}
-              <motion.div variants={fadeInUp} className="bg-surface p-10 flex flex-col items-center text-center group border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 rounded-sm">
-                <span className="font-label text-xs tracking-[0.3em] uppercase text-on-surface-variant mb-6">Essential</span>
-                <h3 className="font-headline text-3xl mb-2">Corte Mensal</h3>
-                <div className="text-primary text-4xl font-bold font-headline mb-8">R$ 80<span className="text-lg text-on-surface-variant font-body font-normal">/mês</span></div>
-                <ul className="space-y-5 mb-12 text-on-surface-variant flex-grow">
-                  <li>1 Corte de Cabelo Premium</li>
-                  <li>Lavagem com Shampoo Especial</li>
-                  <li>Finalização com Pomada Importada</li>
-                  <li>Café Espresso Cortesia</li>
-                </ul>
-                <a className="w-full py-4 border border-primary/20 text-primary font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-on-primary transition-all rounded-sm" href={whatsappLink} target="_blank" rel="noopener noreferrer">Assinar agora</a>
-              </motion.div>
-
-              {/* Plan 2 - Featured */}
-              <motion.div variants={fadeInUp} className="bg-surface-container-high p-10 flex flex-col items-center text-center relative overflow-hidden group border-2 border-primary/50 rounded-sm scale-105 z-10 shadow-2xl shadow-black/50">
-                <div className="absolute top-0 right-0 bg-primary text-on-primary px-6 py-1 text-[10px] font-bold uppercase tracking-tighter">Mais Procurado</div>
-                <span className="font-label text-xs tracking-[0.3em] uppercase text-primary mb-6">Executive</span>
-                <h3 className="font-headline text-3xl mb-2">Combo Premium</h3>
-                <div className="text-primary text-4xl font-bold font-headline mb-8">R$ 140<span className="text-lg text-on-surface-variant font-body font-normal">/mês</span></div>
-                <ul className="space-y-5 mb-12 text-on-surface-variant flex-grow">
-                  <li>Cabelo & Barba (1x mês)</li>
-                  <li>Barboterapia Completa</li>
-                  <li>Sobrancelha Express</li>
-                  <li>Cerveja Artesanal de Boas-vindas</li>
-                  <li>Prioridade no Agendamento</li>
-                </ul>
-                <a className="w-full py-4 bg-primary text-on-primary font-bold uppercase tracking-widest text-xs hover:bg-[#e9c349] transition-all rounded-sm" href={whatsappLink} target="_blank" rel="noopener noreferrer">Assinar agora</a>
-              </motion.div>
-
-              {/* Plan 3 */}
-              <motion.div variants={fadeInUp} className="bg-surface p-10 flex flex-col items-center text-center group border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 rounded-sm">
-                <span className="font-label text-xs tracking-[0.3em] uppercase text-on-surface-variant mb-6">Elite</span>
-                <h3 className="font-headline text-3xl mb-2">Total Gomez</h3>
-                <div className="text-primary text-4xl font-bold font-headline mb-8">R$ 220<span className="text-lg text-on-surface-variant font-body font-normal">/mês</span></div>
-                <ul className="space-y-5 mb-12 text-on-surface-variant flex-grow">
-                  <li>Cortes & Barbas Ilimitados</li>
-                  <li>Manicure Masculina</li>
-                  <li>Máscara de Argila Preta</li>
-                  <li>Voucher Presente Mensal</li>
-                  <li>Acesso VIP a Eventos da Casa</li>
-                </ul>
-                <a className="w-full py-4 border border-primary/20 text-primary font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-on-primary transition-all rounded-sm" href={whatsappLink} target="_blank" rel="noopener noreferrer">Assinar agora</a>
-              </motion.div>
-            </motion.div>
-          </div>
         </section>
 
         {/* Location Section */}
@@ -350,7 +266,6 @@ export default function Home() {
           </div>
           <div className="flex gap-8 font-body text-sm tracking-wide uppercase">
             <a className="text-neutral-500 hover:text-white transition-colors opacity-80 hover:opacity-100" href="#servicos" onClick={(e) => handleSmoothScroll(e, 'servicos')}>Serviços</a>
-            <a className="text-neutral-500 hover:text-white transition-colors opacity-80 hover:opacity-100" href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')}>Planos</a>
             <a className="text-neutral-500 hover:text-white transition-colors opacity-80 hover:opacity-100" href="#localizacao" onClick={(e) => handleSmoothScroll(e, 'localizacao')}>Localização</a>
           </div>
           <div className="flex gap-4 text-xl">
@@ -371,9 +286,9 @@ export default function Home() {
           <span className="text-xl mb-1">✂️</span>
           <span className="font-body text-[10px] uppercase font-bold tracking-wider">Cortes</span>
         </a>
-        <a className="flex flex-col items-center justify-center text-neutral-500 p-2 hover:text-primary active:scale-90 transition-transform" href="#planos" onClick={(e) => handleSmoothScroll(e, 'planos')}>
-          <span className="text-xl mb-1">💎</span>
-          <span className="font-body text-[10px] uppercase font-bold tracking-wider">Planos</span>
+        <a className="flex flex-col items-center justify-center text-neutral-500 p-2 hover:text-primary active:scale-90 transition-transform" href="#localizacao" onClick={(e) => handleSmoothScroll(e, 'localizacao')}>
+          <span className="text-xl mb-1">📍</span>
+          <span className="font-body text-[10px] uppercase font-bold tracking-wider">Local</span>
         </a>
         <a className="flex flex-col items-center justify-center text-neutral-500 p-2 hover:text-primary active:scale-90 transition-transform" href={whatsappLink} target="_blank" rel="noopener noreferrer">
           <span className="text-xl mb-1">💬</span>
